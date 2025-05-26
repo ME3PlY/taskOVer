@@ -1,15 +1,20 @@
 # taskOVer
 
 You are tasked with building a To-Do list application named taskOVer to help improve your friend's productivity and time management. The application will allow users to manage their tasks effectively with a simple menu-driven system. You are assigned to make a program with the description below:
+
 •	The application presents a menu with 5 options:
   1.	View To-Do List
   2.	Add Task
   3.	Mark Task as Done
   4.	Edit Task
   5.	Exit
+
 •	Ask user to input menu choice between 1 and 5. 
+
 •	The application will validate user input and perform actions based on the menu choice. 
+
 •	Use try-catch to validate user input is the correct data type
+
 •	If the user chooses View To-Do List (Menu 1):
   o	Validate if there’s no task. If the list is empty, display: "Your To-Do list is empty!". 
   o	Otherwise, show each task in the list with their status (either "Done" or "Not Done")
