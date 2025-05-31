@@ -30,17 +30,8 @@ public class EditTask {
 
         Data editTask = datalist.get(numberList - 1);
         int editChoice = getEditChoice(sc, editTask);
-        switch (editChoice) {
-            case 1:
-                editName(editTask, sc);
-                break;
-            case 2:
-                editDescription(editTask, sc);
-                break;
-            case 3: 
-                editUrgency(editTask, sc);
-                break;
-        }
+        performEditAction(editChoice, editTask, sc);
+        
         System.out.println("Task update successfully.");
 	}
     
@@ -57,6 +48,24 @@ public class EditTask {
         } while (choice < 1 || choice > 3);
         return choice;
     }
+    
+    private static void performEditAction(int editChoice, Data editTask, Scanner sc) {
+        switch (editChoice) {
+            case 1:
+                editName(editTask, sc);
+                break;
+            case 2:
+                editDescription(editTask, sc);
+                break;
+            case 3:
+                editUrgency(editTask, sc);
+                break;
+            default:
+                System.out.println("Invalid choice.");
+                break;
+        }
+    }
+
     
     private static void editName(Data task, Scanner sc) {
         System.out.print("Enter new name: ");
