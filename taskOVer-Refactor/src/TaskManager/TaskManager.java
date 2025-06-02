@@ -12,6 +12,14 @@ public class TaskManager {
     public TaskManager(Scanner sc) {
         this.sc = sc;
     }
+    
+    private boolean showTasksAndCheckEmpty() {
+        ViewTask.viewTasks(datalist);
+        if (datalist.isEmpty()) {
+            return true;
+        }
+        return false;
+    }
 
     public void viewTasks() {
         ViewTask.viewTasks(datalist);
@@ -22,10 +30,12 @@ public class TaskManager {
     }
 
     public void markTaskDone() {
+    	if (showTasksAndCheckEmpty()) return;
         MarkTask.markTaskDone(datalist, sc);
     }
 
     public void editTask() {
+    	if (showTasksAndCheckEmpty()) return;
         EditTask.editTask(datalist, sc);
     }
 }

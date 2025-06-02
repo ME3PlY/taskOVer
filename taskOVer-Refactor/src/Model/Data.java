@@ -44,4 +44,11 @@ public class Data {
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
+	
+	public String formatForDisplay(int index) {
+	    return index + ". " + title +
+	           " [" + status + "]" +
+	           " - Urgency: " + urgency +
+	           "\n\tDescription: " + desc;
+	}
 }
