@@ -7,12 +7,6 @@ import Model.Data;
 
 public class MarkTask {
     public static void markTaskDone(ArrayList<Data> datalist, Scanner sc) {
-        ViewTask.viewTasks(datalist);
-
-        if (datalist.isEmpty()) {
-            return;
-        }
-
         System.out.print("Enter the number of the task to mark as done [0 to exit]: ");
         int numberList = sc.nextInt();
         sc.nextLine();

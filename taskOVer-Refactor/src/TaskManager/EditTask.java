@@ -9,12 +9,6 @@ import Model.UrgencyLevel;
 
 public class EditTask {
     public static void editTask(ArrayList<Data> datalist, Scanner sc) {
-    	ViewTask.viewTasks(datalist);
-
-        if (datalist.isEmpty()) {
-            return;
-        }
-
         System.out.print("Enter the number of the task you want to edit [0 to exit]: ");
         int numberList = sc.nextInt();
         sc.nextLine();
